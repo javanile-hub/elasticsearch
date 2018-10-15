@@ -20,3 +20,8 @@ Inviare una mail se lo status del cluster passa a RED
 ```bash
 curl -XGET http://localhost:9200/_cluster/health?wait_for_status=red && sendmail "ERRORE SU ELASTIC" -to admin@system.com
 ```
+
+Ispezionare i singoli nodi
+```bash
+curl -XGET http://localhost:9200/_nodes/stats
+```
